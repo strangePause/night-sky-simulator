@@ -7,6 +7,9 @@ A React-based night sky simulator with twinkling stars and realistic visual effe
 - Dynamic star field generation with random positions
 - Twinkling animation effects for stars
 - Realistic star sizes and brightness variations
+- Stellar classification system (O, B, A, F, G, K, M) with distinct colors
+- Configurable star density and brightness
+- Visibility controls for different stellar classes
 - Responsive design that works on different screen sizes
 - Dark gradient background for authentic night sky appearance
 
@@ -18,12 +21,28 @@ A React-based night sky simulator with twinkling stars and realistic visual effe
 
 ## How It Works
 
-The simulator generates 300 stars with random positions, sizes, opacities, and twinkling behaviors. Each star has:
+The simulator generates stars with realistic stellar classifications based on spectral types:
+- **O-type**: Blue-white, hottest and brightest
+- **B-type**: Blue-white
+- **A-type**: White
+- **F-type**: Yellow-white
+- **G-type**: Yellow (like our Sun)
+- **K-type**: Orange
+- **M-type**: Red, coolest and dimmest
+
+Each star has:
 - Random position on the screen (x, y coordinates)
-- Random size between 1-4 pixels
+- Size based on stellar class
+- Brightness determined by class and configuration settings
 - Random opacity between 0.2-1.0
 - Random twinkling animation duration and delay
-- Different brightness levels to create a realistic night sky
+
+## Configuration Controls
+
+The simulator includes interactive controls to customize the night sky:
+- **Star Density**: Adjust the number of stars (50-1000)
+- **Brightness**: Control overall brightness level (0.1x-2.0x)
+- **Star Class Visibility**: Toggle visibility for each stellar class
 
 ## Running the Project
 
@@ -40,12 +59,13 @@ You can customize the simulator by:
 - Modifying star sizes, opacities, and animation properties
 - Changing the background gradient colors in CSS
 - Adding more celestial objects like planets or constellations
+- Extending the stellar classification system with additional classes
 
 ## Project Structure
 
 ```
 src/
-├── App.js          # Main component with night sky simulation
+├── App.js          # Main component with night sky simulation and controls
 ├── App.css         # Styling for the night sky and stars
 └── index.js        # Entry point
 ```
